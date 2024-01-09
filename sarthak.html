@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Invitation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffb6c1; /* Baby Pink */
+      text-align: center;
+      margin: 50px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #555;
+    }
+
+    #invitation {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    #gratitude {
+      margin-top: 20px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    a:hover {
+      background-color: #0056b3;
+    }
+
+    #response {
+      margin-top: 20px;
+      display: none;
+    }
+
+    #love-message {
+      color: #e44d26;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <div id="invitation">
+    <h1>Date Invitation</h1>
+    <p>Hi Mr Jaiswal</p>
+    <p>I love you, and how much I touch you feels less only (hawas wala nai reeeeee, ese cheeks or neck ka baat krrha h specifically...huhhhhh) lalalaloveyou! If you would like to go out on a date with me sometimeeeeee... It would mean a lot to me!</p>
+    <div id="gratitude">
+      <p>YOUAREEETHEFUCKINGGBESTT!</p>
+      <p>Looking forward to your response.</p>
+      <a href="#" id="acceptBtn">Accept the Invitation</a>
+      <a href="#" id="rejectBtn">Sorry, I can't make it</a>
+    </div>
+  </div>
+
+  <div id="response">
+    <p id="love-message"></p>
+    <canvas id="confetti"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    document.getElementById('acceptBtn').addEventListener('click', function() {
+      document.getElementById('gratitude').style.display = 'none';
+      document.getElementById('response').style.display = 'block';
+      document.getElementById('love-message').textContent = 'Iknewwwit obv! (side eye) Love you, yayy!';
+
+      // Confetti Effect
+      particlesJS('confetti', {
+        particles: {
+          number: {
+            value: 200,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: '#e44d26',
+          },
+          shape: {
+            type: 'circle',
+          },
+          opacity: {
+            value: 0.8,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 2,
+              opacity_min: 0,
+              sync: false,
+            },
+          },
+          size: {
+            value: 5,
+            random: true,
+          },
+          line_linked: {
+            enable: false,
+          },
+          move: {
+            enable: true,
+            speed: 3,
+            direction: 'bottom',
+            random: true,
+            straight: false,
+            out_mode: 'out',
+            bounce: false,
+          },
+        },
+        retina_detect: true,
+      });
+    });
+
+    document.getElementById('rejectBtn').addEventListener('click', function() {
+      document.getElementById('gratitude').style.display = 'none';
+      document.getElementById('response').style.display = 'block';
+      document.getElementById('love-message').textContent = 'I am sad but okay. Life hai, hota hai';
+    });
+  </script>
+</body>
+</html>
