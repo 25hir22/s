@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message to Family</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+      background-color: #ffb6c1; /* Baby Pink */
+    }
+
+    p {
+      color: #555;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>I love you Mummaaaa, Bhai, and Papaaa!</p>
+    <p>I already miss ghar ka chai, puri, koinaaa. Just testing my website banane ka skill. Bye.</p>
+    <button onclick="askLoveQuestion('love')">I love you</button>
+    <button onclick="askLoveQuestion('dontLove')">I don't love you</button>
+  </div>
+
+  <script>
+    function askLoveQuestion(choice) {
+      if (choice === 'love') {
+        alert("Yayyy! Love you too!");
+      } else {
+        alert("Oho! I am sad. Bye.");
+      }
+    }
+  </script>
+</body>
+</html>
